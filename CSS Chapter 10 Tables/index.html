@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    //Make it so there is no wrapping
+    <style>
+        .nowrap{
+            display:flex;
+            flex-wrap: nowrap;
+        }
+
+        table{
+            /* this destorys the border between each column */
+            border-collapse:collapse
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    // Working with tables
+
+
+    //
+
+    <table width="80%" align="left"
+    border="3" summary="Best hitters of all time" >
+
+        <tr>
+            <th align=left> Student Name</th>
+            <th colspan=2 nowrap= “nowrap”>  Student Gradesasdfasdfasdfasdfasd </th>
+            <th> Student Classes</th>
+        </tr>
+        <tr>
+            <td>Joseph</td>
+            <td> 70</td>
+            <td> Biology</td>
+        </tr>
+
+        <tr>
+            <td>Joseph</td>
+            <td> 70</td>
+            <td> Biology</td>
+        </tr>
+        </table>
+    </table>
+
+
+    
+    <!-- Add a box -->
+    <div id="box" style="height:100px; width:100px; border: 1px solid black; margin-top:30px; text-align:center" >
+        <p>Joseph is cool</p>
+    </>
+</body>
+</html>

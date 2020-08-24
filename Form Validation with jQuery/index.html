@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        #myform{}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myform" >
+
+       <label>Name<input type=text name="field"/></label>
+       <div>
+       <label>Password<input id="password" type=password name="field"/></label>
+       </div>
+       <button>submit</button>
+    </form>
+
+    <div style="display: block">
+        <label class="required field">Faculty</label>
+        <label><input type="checkbox" name="faculty" value="physics"/>Physics</label>
+    
+        <label><input type="checkbox" name="faculty" value="biology"/>Biology</label>
+        <p id="p1"></p>
+        </div>
+
+<script>
+            
+$(function(){
+   
+//task 0: append a variable 
+
+var mouse = 'my name is Joseph' 
+var faculty = $('input[value="biology"]').get(0);
+
+
+console.log(faculty.value);
+$('#p1').append(mouse);
+
+
+// Task 1 
+   //Checking the checkbox 
+    $('input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+
+            console.log("Checkbox is checked.");
+            $('#myform').hide();
+        }
+        else if($(this).prop("checked") == false){
+            console.log("Checkbox is unchecked.");
+        }
+    });
+
+
+//Task 2 
+    $('#myform input[type=text]').click(function(){
+        $('#p1').text('')
+    })
+
+
+    $('#myform input[type=text]').blur(function(){
+        if($(this).val().length ==0){
+            console.log("joseph")
+            $('#p1').text('this is empty')
+        }
+    })
+
+
+//Task 3 
+    $('#myform').submit(function(e){
+        e.preventDefault();
+        $('#myform input').each(function(index, item){
+
+            if($(item).val().length==0){
+                $('#p1').text('one of the field is empty');
+            }
+        })
+    })
+
+
+//Task 4
+$('#password').blur(function(){
+
+    if($(this).val().length<10){
+        $('#p1').text('Password needs to be longer than 10');
+    }
+})
+
+
+});
+
+
+</script>
+
+</body>
+</html>

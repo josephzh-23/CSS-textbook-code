@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        form div{
+            margin-bottom: 1em;
+        }
+
+        div.submit input{
+            margin-left: 165px;
+        }
+
+        label.field{
+
+            display:block;
+            float:left;
+            margin-right:15px;
+            width:150px;
+            text-align:right 
+        }
+
+        labe.required{
+            font-weight:bold
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <form action ="/register" method = "post" enctype="multipart/form-data">
+    <!-- 1. text input -->
+
+    <div>
+
+    <label class="required field" for ='studentname'> Enter studen'ts name</label>
+    <input type= 'text' name = 'studentname' maxlength='13' size=9/>
+   </div>
+
+    <!-- Password control -->
+    <div>
+    <label class="required field" for ='user-password'> Enter studen'ts name</label>
+    <input type= 'password' name = 'user-password' maxlength='13'
+    size = 9/>
+    </div>
+
+    <!-- Radio button for gender -->
+    <div>
+        <label class="required field">Gender</label>
+        <label><input type="radio" name="gender" value="male"/>Male</label>
+    <label><input type="radio" name="gender" value="female"/>Female</label>
+    </div>
+
+      <!-- Select-list -->
+      <div>
+      <label class="required field" for="location"> Please pick your studying spot</label>
+      <select name = "location">
+          <option value="library">Library</option>
+          <option value="cafeteria">Cafeteria</option>
+
+          <option value="classroom">Classroom</option>
+      </select>
+    </div>
+
+    <!-- Checkbox--></br>
+    <div style="display: block">
+    <label class="required field">Faculty</label>
+    <label><input type="checkbox" name="faculty" value="physics"/>Physics</label>
+
+    <label><input type="checkbox" name="faculty" value="biology"/>Biology</label>
+
+    <label><input type="checkbox" name="faculty" value="Chemistry"/>
+    Chemistyr</label>
+    </div>
+
+
+    <div>
+    <input  style="display:block; margin: 80px 0px 0px"  type = "submit" value="send form data" name='button1'
+    onclick= verifyData()/>
+</div>
+
+    <!-- Using hidden form -->
+
+    <input type = "hidden" name="id" value="1402"/>
+
+
+    
+    <!-- Text area  -->
+    <label for= "question4" style="display:block; margin: 30px 0px 0px" > please comment on our customer service </label>
+    <textarea name= "question4" rows= "10" cols = "60"> Enter your
+        answer here</textarea>
+    </div>
+</form>
+
+
+
+
+
+//The right side
+    <div style="display:inline; vertical-align:top; position:absolute;top:5px;">
+      
+    </div>
+</body>
+</html>
